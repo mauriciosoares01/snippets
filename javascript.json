@@ -1,0 +1,114 @@
+{
+	// Place your snippets for javascript here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	"Create react function hooks": {
+		"prefix": "rnfhooks",
+		"body": [
+			"import React, {useState, useEffect} from 'react';",
+			"import {Container} from './styles.js';",
+			"",
+			"function ${func}() {",
+			"  const [${estado}, ${modificador}] = useState();",
+			"",
+			"  useEffect(() => {",
+			"  }, []);",
+			"",
+			"  return <Container />;",
+			"",
+			"export default ${func};",
+		],
+		"description": "Cria um componente funcional com hooks",
+	},
+	"React request fucntion": {
+		"prefix": "rnreq",
+		"body": [
+			"async function ${func}() {",
+			"  setLoading(true);",
+			"  const result = await Service.function();",
+			"  console.log(result);",
+			"  if (result.ok) {",
+			"    setData(result.data);",
+			"  } else {",
+			"    setError();",
+			"  }",
+			"  setLoading(false);",
+			"}",
+		],
+		"description": "Função padrão para acessar um serviço, verificar a resposta e salvar os dados",
+	},
+	"Create default FlatList": {
+		"prefix": "flatlist",
+		"body": [
+			"<FlatList",
+			"  data={${data}}",
+			"  keyExtractor={item => String(item.id)}",
+			"  renderItem={_renderItem}",
+			"  ListEmptyComponent={${component}}",
+			"/>",
+		],
+		"description": "Cria uma FlatList padrão com as propriedades mais utilizadas",
+	},
+	"Create a service static function": {
+		"prefix": "servfunc",
+		"body": [
+			"static async ${func}(data) {",
+			"  return api",
+			"    .post(`/${route}/`, {params: {...data}})",
+			"    .then(async (response) => {",
+			"      if (response.status) {",
+			"        return {",
+			"          data: response.data,",
+			"          ok: true,",
+			"        };",
+			"      }",
+			"      return {",
+			"        ok: false,",
+			"        message: response.data.message || 'Erro',",
+			"      };",
+			"    })",
+			"    .catch(error => ({",
+			"       ok: false,",
+			"       message: error.response.data.message || 'Erro',",
+			"    }));",
+			"}",
+		],
+		"description": "Cria uma função de serviço estática completa"
+	},
+	"Creat redux map constants": {
+		"prefix": "mapProps",
+		"body": [
+			"const mapStateToProps = state => ({",
+			"  ${state}: state.${reducer},",
+			"});",
+			"",
+			"const mapDispatchToProps = {",
+			"  ${function}: Creators.${action},",
+			"};",
+		],
+		"description": "Cria constantes de mapeamento para estados e dispatches",
+	},
+	"Create proptypes objects": {
+		"prefix": "proptypes",
+		"body": [
+			"${func}.defaultProps = {",
+			"  ${prop}: null,",
+			"};",
+			"",
+			"${func}.propTypes = {",
+			"  ${prop}: PropTypes.${type},",
+			"};",
+		],
+		"description": "Cria declaração básica de proptypes",
+	}
+}
