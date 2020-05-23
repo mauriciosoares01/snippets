@@ -16,7 +16,7 @@ Type the prefix, select the respective in the menu, custom with your code and pr
   
 - 2st option
 
-  Find the snippet folder of VS Code. In my computer was: Users > umbutech > Library > Application Support > Code > snippets
+  Find the snippet folder of VS Code and place the JSON file inside. In my computer was: Users > umbutech > Library > Application Support > Code > snippets
 
 ### Examples
 
