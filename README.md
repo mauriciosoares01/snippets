@@ -14,7 +14,7 @@ Type the prefix, select the respective in the menu, custom with your code and pr
 
   Go to File > Preferences > User Snippets, selection the language to set the snippets. The snippets file is an JSON file with the name of the language (ex: javascript.json). Then, copy the content from the repectivelly file in this repository, to your file in VS Code.
   
-- 2st option
+- 2nd option
 
   Find the snippet folder of VS Code and place the JSON file inside. In my computer was: Users > umbutech > Library > Application Support > Code > snippets
 
